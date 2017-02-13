@@ -1,0 +1,19 @@
+package com.yuanbao.crm.admin.sys.auth.entity;
+
+/**
+ * Created by gewen on 2017/1/21.
+ */
+public enum AuthType {
+
+    user("用户"), user_group("用户组"), organization_job("组织机构和工作职务"), organization_group("组织机构组");
+
+    private final String info;
+
+    private AuthType(String info) {
+        this.info = info;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+}

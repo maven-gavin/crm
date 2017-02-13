@@ -1,0 +1,38 @@
+language: java
+
+
+env:
+  - DB=mysql
+
+jdk:
+  - openjdk7
+
+mysql:
+  database: es
+  username: root
+  password : 123456
+  encoding: utf8
+
+install:
+  - mvn install -Dmaven.test.skip=true
+
+before_script:
+  - cd crm-admin
+  - mvn clean
+  - mvn db:create
+  - mvn db:schema
+  - mvn db:data
+  - cd ..
+
+script:
+  - cd crm-common
+  - mvn test
+  - cd ..
+  - cd web
+  - mvn test -Pit
+
+
+
+notifications:
+  email:
+    - 52148274@qq.com
