@@ -11,7 +11,7 @@
 
     <artifactId>crm-common</artifactId>
     <packaging>jar</packaging>
-    <name>common</name>
+    <name>crm-common</name>
 
 
 </project>

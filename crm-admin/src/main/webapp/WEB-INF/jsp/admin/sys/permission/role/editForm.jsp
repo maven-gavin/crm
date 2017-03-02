@@ -3,7 +3,7 @@
 <es:contentHeader/>
 <%@include file="/WEB-INF/jsp/common/import-zTree-css.jspf"%>
 <style>
-    #resourceInfo, #appendResourcePermissionBtn {
+    #appInfo,#resourceInfo, #appendResourcePermissionBtn {
         padding-top: 20px;
     }
 
@@ -94,10 +94,10 @@
 
 
         </div>
-        <div id="resourcePermissionInfo" class="span10">
+        <div id="resourcePermissionInfo" >
             <h4 class="hr">授权信息</h4>
             <div id="selectResourcePermission">
-                <div class="muted font-12" style="margin: 10px auto;">
+                <div class="muted font-12 span12" style="margin: 10px auto;">
                     请选择授权的角色
                 </div>
                 <div id="resourceInfo" class="span3">
@@ -325,19 +325,19 @@
 
             var template =
                     "<tr>" +
-                            "<td class='check'><input type='checkbox'></td>" +
-                            "<td>" +
-                            "<input type='hidden' id='resourceId_{resourceId}' name='resourceId' value='{resourceId}'>" +
-                            "{resourceName}" +
-                            "</td>" +
-                            "<td>" +
-                            "<input type='hidden' name='permissionIds' value='{permissionIds}'>" +
-                            "{permissionNames}" +
-                            "</td>" +
-                            "<td>" +
-                            "<a class='btn btn-link btn-edit btn-delete-resource-permission' href='javascript:;' onclick='removeResourcePermission(this);'><i class='icon-trash'></i></a>" +
-                            "</td>" +
-                            "</tr>";
+                    "<td class='check'><input type='checkbox'></td>" +
+                    "<td>" +
+                    "<input type='hidden' id='resourceId_{resourceId}' name='resourceId' value='{resourceId}'>" +
+                    "{resourceName}" +
+                    "</td>" +
+                    "<td>" +
+                    "<input type='hidden' name='permissionIds' value='{permissionIds}'>" +
+                    "{permissionNames}" +
+                    "</td>" +
+                    "<td>" +
+                    "<a class='btn btn-link btn-edit btn-delete-resource-permission' href='javascript:;' onclick='removeResourcePermission(this);'><i class='icon-trash'></i></a>" +
+                    "</td>" +
+                    "</tr>";
 
             for(var index in resourceIds) {
                 var resourceId = resourceIds[index];

@@ -3,12 +3,11 @@
 <es:contentHeader title="用户登录" index="true"/>
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
-        <a class="brand" href="#">&nbsp;&nbsp;es脚手架</a>
+        <a class="brand" href="#">&nbsp;&nbsp;白鹭管理系统</a>
         <ul class="nav">
             <li class="active"><a href="#">登录</a></li>
-            <li><a href="https://github.com/zhangkaitao/es" target="_blank">github</a></li>
         </ul>
-        <a class="brand" style="float: right" href="mailto:zhangkaitao0503@gmail.com" target="_blank">&nbsp;&nbsp;问题反馈</a>
+        <a class="brand" style="float: right" href="mailto:52148274@qq.com" target="_blank">&nbsp;&nbsp;问题反馈</a>
     </div>
 </div>
 

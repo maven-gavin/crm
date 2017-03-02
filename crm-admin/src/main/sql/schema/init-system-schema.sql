@@ -16,6 +16,9 @@ drop table if exists `sys_role_resource_permission`;;
 drop table if exists `sys_group`;;
 drop table if exists `sys_group_relation`;;
 drop table if exists `sys_auth`;;
+drop table if exists `sys_app`;;
+drop table if exists `sys_user_app_roles`;;
+
 ##user
 create table `sys_user`(
   `id`         bigint not null auto_increment,

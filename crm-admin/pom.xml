@@ -11,7 +11,7 @@
 
     <artifactId>crm-admin</artifactId>
     <packaging>war</packaging>
-    <name>admin</name>
+    <name>crm-admin</name>
 
     <dependencies>
         <dependency>
@@ -119,6 +119,50 @@
                         <version>1.7.0</version>
                         <scope>system</scope>
                         <systemPath>${java.home}/../lib/tools.jar</systemPath>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>com.googlecode</groupId>
+                <artifactId>maven-db-plugin</artifactId>
+                <version>1.4</version>
+                <configuration>
+                    <adminDbConnectionSettings>
+                        <jdbcDriver>${connection.driver_class}</jdbcDriver>
+                        <jdbcUrl>${connection.admin.url}</jdbcUrl>
+                        <userName>${connection.username}</userName>
+                        <password>${connection.password}</password>
+                    </adminDbConnectionSettings>
+                    <appDbConnectionSettings>
+                        <jdbcDriver>${connection.driver_class}</jdbcDriver>
+                        <jdbcUrl>${connection.url}</jdbcUrl>
+                        <userName>${connection.username}</userName>
+                        <password>${connection.password}</password>
+                    </appDbConnectionSettings>
+                    <dbDataScriptsDirectory>
+                        <param>src/main/sql/data</param>
+                    </dbDataScriptsDirectory>
+                    <dbSchemaScriptsDirectory>
+                        <param>src/main/sql/schema</param>
+                    </dbSchemaScriptsDirectory>
+                    <dbUpdateScriptsDirectory>
+                        <param>src/main/sql/update</param>
+                    </dbUpdateScriptsDirectory>
+                    <dbDropStatements>
+                        drop database ${db.name};
+                    </dbDropStatements>
+                    <dbCreateStatements>
+                        create database ${db.name} CHARACTER SET 'utf8';
+                    </dbCreateStatements>
+                    <dbDropStatements>drop database ${db.name}; </dbDropStatements>
+                    <sqlDelimiter>;;</sqlDelimiter>
+                    <!--<scriptEncoding>GBK</scriptEncoding>-->
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>${mysql.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>
