@@ -5,7 +5,7 @@ env:
   - DB=mysql
 
 jdk:
-  - openjdk8
+  - openjdk7
 
 mysql:
   database: es
