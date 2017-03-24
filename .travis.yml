@@ -28,7 +28,13 @@ script:
   - cd crm-common
   - mvn test
   - cd ..
-  - cd web
+  - cd crm-core
+  - mvn test
+  - cd ..
+  - cd crm-client
+  - mvn test
+  - cd ..
+  - cd crm-admin
   - mvn test -Pit
 
 

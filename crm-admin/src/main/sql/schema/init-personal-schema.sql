@@ -4,6 +4,7 @@
 drop table if exists `personal_message`;;
 drop table if exists `personal_message_content`;;
 drop table if exists `personal_calendar`;;
+drop table if exists `personal_sms`;;
 
 
 create table `personal_message`(
@@ -53,4 +54,13 @@ create table `personal_calendar`(
   `text_color` varchar(100),
   constraint `pk_office_calender` primary key(id),
   index `office_calendar_user_id_start_date` (user_id, start_date)
-) ;;
+) charset=utf8 ENGINE=InnoDB;;
+
+create table `personal_sms`(
+  `id` BIGINT NOT NULL AUTO_INCREMENT,
+  `create_date` timestamp default 0,
+  `title` VARCHAR(200) DEFAULT NULL ,
+  `content` VARCHAR(255) DEFAULT NULL ,
+  `footer` VARCHAR(200) DEFAULT NULL ,
+  CONSTRAINT `pk_personal_sms_id` PRIMARY KEY (`id`)
+)charset=utf8 ENGINE=InnoDB;;

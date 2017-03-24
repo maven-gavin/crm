@@ -9,10 +9,9 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>crm-common</module>
+        <module>web-shiro-core</module>
+        <module>platform-base</module>
         <module>crm-admin</module>
-        <module>crm-core</module>
-        <module>crm-client</module>
     </modules>
     <name>crm</name>
     <url>https://github.com/maven-gavin/crm</url>

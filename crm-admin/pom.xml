@@ -16,12 +16,12 @@
     <dependencies>
         <dependency>
             <groupId>com.yuanbao</groupId>
-            <artifactId>crm-common</artifactId>
+            <artifactId>plateform-base</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.yuanbao</groupId>
-            <artifactId>crm-core</artifactId>
+            <artifactId>web-shiro-core</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
