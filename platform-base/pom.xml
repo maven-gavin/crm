@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>plateform-base</artifactId>
+    <artifactId>platform-base</artifactId>
     <packaging>jar</packaging>
-    <name>crm-common</name>
+    <name>platform-base</name>
 
 
 </project>
